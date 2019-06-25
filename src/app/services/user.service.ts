@@ -7,10 +7,10 @@ import { User } from '../models/user.interface';
   providedIn: 'root'
 })
 export class UserService {
-  API:string = 'https://api.github.com'
-  constructor(private http:HttpClient) { }
+  API = 'https://api.github.com';
+  constructor(private http: HttpClient) { }
 
-  getAll():Observable<User[]>{
-    return this.http.get<User[]>(`${this.API}/users`)
+  getAll(): Observable<User[]> {
+    return this.http.get<User[]>(`${this.API}/users`);
   }
 }
